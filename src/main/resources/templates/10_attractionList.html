@@ -1,0 +1,20 @@
+<!--Derre Evers -r0832729-->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Attraction list</title>
+    <link rel="stylesheet" type="text/css" href="img/style.css" />
+</head>
+<body>
+<h1 th:text="'Attractions of '+${themePark.getName()}"></h1>
+<ol >
+    <li th:each="attraction : ${themePark.getAttractions()}">
+        <p th:utext=" '&lt;strong&gt;'+${attraction.getName()} +' &lt;/strong&gt; - responsible: '+${attraction.getResponsible().getFirstName()}+' '+${attraction.getResponsible().getSurName()}"></p>
+        <p th:text="'Duration: '+${attraction.getDuration()}+' seconds'"></p>
+        <img onerror="this.src='img/noimage.jpg'" th:src="@{${attraction.getPhoto()}}"/>
+    </li>
+</ol>
+<p><a href="/">Back to the homepage</a></p>
+</body>
+</html>

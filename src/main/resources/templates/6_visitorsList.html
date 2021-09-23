@@ -1,0 +1,30 @@
+
+<!--Derre Evers -r0832729-->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="img/style.css" />
+    <title>Visitors list</title>
+</head>
+<body>
+<h1>Our visitors</h1>
+<ol>
+    <li th:each="visitor : ${visitors}">
+        <p th:text="${visitor.getFirstName()}+' '+ ${visitor.getSurName()}"></p>
+        <ul>
+            <li th:text="'year of birth: '+ ${visitor.getYearOfBirth()}"></li>
+            <li th:text="'park code: '+ ${visitor.getThemeParkCode()}"></li>
+            <li>wish list:
+            <ul>
+                <li th:each="wish : ${visitor.getWishList()}" th:text="${wish}">
+
+                </li>
+            </ul>
+            </li>
+        </ul>
+    </li>
+</ol>
+<p><a href="/">Back to the homepage</a></p>
+</body>
+</html>

@@ -1,0 +1,60 @@
+/*Derre Evers -r0832729*/
+html {
+    font-size: 16px;
+    font-family: "Bell MT";
+}
+
+body {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: black;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+
+}
+
+nav ul {
+    display: flex;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 50px;
+}
+
+nav li {
+    background-color: blueviolet;
+    list-style-type: none;
+    float: left;
+    flex-direction: row;
+    flex: 1 1 auto;
+    outline-offset: -2px;
+    border: 1px solid #000;
+}
+
+li a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+nav li:hover{
+    background-color: blue;
+}
+
+p a{
+    border: 2px solid black;
+    background-color: blueviolet;
+    text-decoration: none;
+    color: white;
+}
+
+p a:hover{
+    background-color: blue;
+}
+
+ul{
+    list-style-type: square;
+}
