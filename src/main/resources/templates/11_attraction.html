@@ -1,0 +1,14 @@
+<!--Derre Evers -r0832729-->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="img/style.css" />
+    <title>Attraction</title>
+</head>
+<body>
+<h3 th:text="'We found this attraction: '+${attraction.getName()}"></h3>
+<p th:text="'Responsible: '+ ${attraction.getResponsible().getFirstName()}+' '+${attraction.getResponsible().getSurName()}"></p>
+<img th:src="${attraction.getPhoto()}" th:alt="${attraction.getName()}">
+</body>
+</html>

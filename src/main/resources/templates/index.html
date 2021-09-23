@@ -1,0 +1,30 @@
+<!--Derre Evers -r0832729-->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Theme Park</title>
+    <link rel="stylesheet" type="text/css" href="img/style.css">
+</head>
+<body>
+<nav>
+<ul class="nav">
+    <li><a href="/1_newVisitor">Create a new visitor</a></li>
+    <li><a href="/3_newStaffMember">Create a new staff member</a></li>
+    <li><a href="/5_staffList">Show the staff list</a></li>
+    <li><a href="/6_visitorsList">Show the visitors list</a></li>
+    <li><a href="/7_newThemePark">Create a new theme park</a></li>
+    <li><a href="/8_themeParksList">Show the theme parks list</a></li>
+    <li><a href="/9_newAttraction">Create new attraction</a></li>
+</ul>
+</nav>
+<h3>Search attraction by name</h3>
+<form action="/searchAttraction">
+    <p>
+        <label for="nameAttraction">Name attraction</label>
+        <input type="text" id="nameAttraction"name="nameAttraction">
+    </p>
+    <p><input type="submit" name="submit" value="Search attraction"></p>
+</form>
+</body>
+</html>

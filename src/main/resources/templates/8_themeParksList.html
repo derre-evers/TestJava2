@@ -1,0 +1,21 @@
+<!--Derre Evers -r0832729-->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Theme Parks</title>
+    <link rel="stylesheet" type="text/css" href="img/style.css" />
+</head>
+<body>
+<h1>Theme parks (and number of attractions):</h1>
+<nav>
+<ul >
+    <li th:each="themePark : ${themeParks}">
+    <a th:text="${themePark.getName()}+ ' ('+${themePark.getNumberOfAttractions()}+')'"
+       th:href="@{/10_attractionList(parkIndex = ${themeParkStat.index})}"></a>
+    </li>
+</ul>
+</nav>
+<p><a href="/">Back to homepage</a></p>
+</body>
+</html>

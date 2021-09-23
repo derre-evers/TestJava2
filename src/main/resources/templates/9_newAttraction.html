@@ -1,0 +1,43 @@
+<!--Derre Evers -r0832729-->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="img/style.css" />
+    <title>New Attraction</title>
+</head>
+<body>
+<h1>New Attraction</h1>
+<form action="/submitNewAttraction">
+    <p>
+        <label for="attractionName">Name attraction</label>
+        <input type="text" name="attractionName" id="attractionName">
+    </p>
+    <p>
+        <label for="duration">Duration (in sec)</label>
+        <input type="text" name="duration" id="duration">
+    </p>
+    <p>
+        <label for="picture">Picture</label>
+        <input type="text" name="picture" id="picture">
+    </p>
+    <p >
+        <select name="themePark">
+            <option value="-1">In which theme park?</option>
+            <option th:each="themePark : ${themeParks}" th:text="${themePark.getName()}" th:value="${themeParkStat.index}"></option>
+        </select>
+    </p>
+    <p>
+        <select name="staffMember">
+            <option value="-1">Who is responsible for this attraction</option>
+            <option th:each="staffMember : ${staff}" th:text="${staffMember.getFirstName()}+ ' '+${staffMember.getSurName()}" th:value="${staffMemberStat.index}"></option>
+        </select>
+    </p>
+    <p>
+        <input type="submit" name="submit" value="Confirm attraction">
+    </p>
+
+</form>
+<p><a href="/">Back to the homepage</a></p>
+</body>
+</html>
