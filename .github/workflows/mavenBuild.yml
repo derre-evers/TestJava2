@@ -39,7 +39,7 @@ jobs:
         path: ./target/spring-github-actions-demo-0.1.jar
   deploy:
     runs-on: ubuntu-latest
-    needs: release
+    needs: test
     name: Deploy to Heroku
     steps:
       - uses: actions/checkout@v2
